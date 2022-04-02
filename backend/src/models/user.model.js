@@ -77,7 +77,7 @@ userSchema.statics.getUsers = async () => {
   return user;
 
 }
-userSchema.statics.getoneuser = async function (iduser) {
+userSchema.statics.getUser = async function (iduser) {
   console.log(iduser);
   const getUser = await User.findOne({ _id: iduser })
 

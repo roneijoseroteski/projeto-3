@@ -41,8 +41,18 @@ exports.loginUser = async (req, res) => {
     res.status(400).json({ err: err })
   }
 }
+exports.getUser = async (req, res) => {
+  try {
+    const idUser = req.body._id;
+    const user = await User.getUser(idUser);
+    res.status(200).json(user)
+  } catch (err) {
+    res.status(400).json({ err: err })
+  }
+}
 exports.returnUserProfile = async (req, res) => {
-  const user = await User.getUsers()
+
+  const user = await User.getUser()
   res.send(user)
   // getUsers
   // await res.json(req.userData);

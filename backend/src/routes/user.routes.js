@@ -16,7 +16,7 @@ router.post('/login', userController.loginUser);
 // rota de profite do 'User':(GET)localhost:3000/api/v1/userProfile
 router.get('/userProfile', auth,  userController.returnUserProfile)
 // nomes tem que ser de acordo com aquilo que sera feito ;
-
+router.post('/getuser', userController.getUser)
 // localhost:3000/api/v1/:id
 // router.get('/:id', userController.getUser);
 
